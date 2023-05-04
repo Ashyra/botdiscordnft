@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  bot:
+    container_name: bot
+    image: bot
+    build: .
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: "2048M"
+        reservations:
+          cpus: "0.25"
+          memory: "128M"
+
+
